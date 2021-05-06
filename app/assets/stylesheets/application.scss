@@ -14,11 +14,11 @@
  *= require_self
  */
 
-  @import 'bootstrap';
+@import 'bootstrap';
 
-$green-color: #16A085;
-$red-color: #C0392B;
-$light-green-color: #1ABC9C;
+$green-color: #16a085;
+$red-color: #c0392b;
+$light-green-color: #1abc9c;
 
 .text-green {
   color: $green-color;
@@ -44,15 +44,40 @@ $light-green-color: #1ABC9C;
   background-color: $light-green-color;
 }
 
+.footer a {
+  margin-right: 0.5rem;
+  color: $light-green-color;
+  height: 30px;
+  text-decoration: none;
+}
+
+.nav-links a {
+  margin-right: 0.7rem;
+  color: gray;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
 .user-forms {
   box-shadow: 0 0 4px 4px rgba(128, 128, 128, 0.603);
+
   a {
     color: $light-green-color;
     transition: 0.3s;
     text-decoration: none;
   }
+
   a:hover {
-    color: #F1C40F;
+    color: #f1c40f;
+    text-decoration: underline;
+  }
+}
+
+.nav-links {
+  font-size: 0.8rem;
+
+  a:hover {
+    color: $light-green-color;
     text-decoration: underline;
   }
 }
@@ -60,22 +85,9 @@ $light-green-color: #1ABC9C;
 .navbar {
   min-height: 60px;
   box-shadow: 0 0 3px 3px gray;
+
   .navbar-brand {
     font-size: 1.3rem;
-  }
-}
-
-.nav-links {
-  font-size: 0.8rem;
-  a {
-    margin-right: 0.7rem;
-    color: gray;
-    transition: 0.3s;
-    text-decoration: none;
-  }
-  a:hover {
-    color: $light-green-color;
-    text-decoration: underline;
   }
 }
 
@@ -96,17 +108,11 @@ $light-green-color: #1ABC9C;
       height: 30px;
       text-decoration: none;
     }
+
     a:hover {
       color: #ff741e;
       text-decoration: underline;
     }
-  }
-
-  a {
-    margin-right: 0.5rem;
-    color: $light-green-color;
-    height: 30px;
-    text-decoration: none;
   }
 
   .social-links {
@@ -114,6 +120,7 @@ $light-green-color: #1ABC9C;
       margin-right: 0.8rem;
     }
   }
+
   svg {
     fill: $light-green-color;
     width: 30px;
