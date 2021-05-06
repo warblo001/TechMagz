@@ -2,13 +2,14 @@ class SessionsController < ApplicationController
   def sign_in; end
 
   def create
-    user = User.find_by(name: session_params[:name])
-    if user
+    @user = User.find_by(name: session_params[:name])
+    if @user
       session[:current_user_id] = user.id
-      redirect_to user, notice: 'Sing in successfully'
+      redirect_to @user, notice: 'Sign in successfully'
     else
       session[:current_user_id] = nil
-      render 'sign_in', notice: 'user doesn\'t exist'
+      flash.now[:alert] = 'User doesn\'t exist'
+      render 'sign_in'
     end
   end
 
