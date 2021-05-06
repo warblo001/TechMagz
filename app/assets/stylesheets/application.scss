@@ -1,0 +1,133 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import 'bootstrap';
+
+$green-color: #16a085;
+$red-color: #c0392b;
+$light-green-color: #1abc9c;
+
+.text-green {
+  color: $green-color;
+}
+
+.bg-green {
+  background-color: $green-color;
+}
+
+.text-red {
+  color: $red-color;
+}
+
+.bg-red {
+  background-color: $red-color;
+}
+
+.text-light-green {
+  color: $light-green-color;
+}
+
+.bg-light-green {
+  background-color: $light-green-color;
+}
+
+.footer a {
+  margin-right: 0.5rem;
+  color: $light-green-color;
+  height: 30px;
+  text-decoration: none;
+}
+
+.nav-links a {
+  margin-right: 0.7rem;
+  color: gray;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.user-forms {
+  box-shadow: 0 0 4px 4px rgba(128, 128, 128, 0.603);
+
+  a {
+    color: $light-green-color;
+    transition: 0.3s;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #f1c40f;
+    text-decoration: underline;
+  }
+}
+
+.nav-links {
+  font-size: 0.8rem;
+
+  a:hover {
+    color: $light-green-color;
+    text-decoration: underline;
+  }
+}
+
+.navbar {
+  min-height: 60px;
+  box-shadow: 0 0 3px 3px gray;
+
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+}
+
+.footer {
+  min-height: 60px;
+  position: absolute;
+  bottom: 0;
+  font-size: 0.9rem;
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .info {
+    a {
+      margin-right: 0.5rem;
+      color: $light-green-color;
+      height: 30px;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #ff741e;
+      text-decoration: underline;
+    }
+  }
+
+  .social-links {
+    span:first-child {
+      margin-right: 0.8rem;
+    }
+  }
+
+  svg {
+    fill: $light-green-color;
+    width: 30px;
+    height: auto;
+  }
+}
+
+.signs {
+  height: 70vh;
+}
