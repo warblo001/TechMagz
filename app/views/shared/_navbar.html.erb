@@ -2,10 +2,9 @@
   <%= link_to 'TechMagz', root_path, class: 'navbar-brand text-brown pl-3' %>
   <div class="nav-links">
     <%= link_to 'Home', root_path %>
-    <%= link_to 'New Article', root_path %>
+    <%= link_to 'New Article', user_path(1) %>
   </div>
   <div class="nav-links">
-    <%= link_to 'Sign In', user_sign_in_path %>| 
-    <%= link_to 'Sign Up', new_user_path %>
+    <%= login_or_logout %>
   </div>
 </nav>
