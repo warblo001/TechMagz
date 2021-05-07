@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
     end
   end
 
-    def log_out
+  def log_out
     session[:current_user_id] = nil
     redirect_to root_path, alert: 'You Logged out.'
   end

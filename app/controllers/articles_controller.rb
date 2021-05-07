@@ -6,15 +6,15 @@ class ArticlesController < ApplicationController
   def create
     @article = current_user.articles.build(article_params)
     if @article.save
-      redirect_to 
+      redirect_to
     else
       render :new, notice: 'There was an error creating this article.'
     end
   end
 
-  private 
+  private
 
   def article_params
-    params.require(:articles).permit(:)
+    params.require(:articles).permit
   end
 end
