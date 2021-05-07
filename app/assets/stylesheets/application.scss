@@ -19,7 +19,8 @@
 $green-color: #16a085;
 $red-color: #c0392b;
 $light-green-color: #1abc9c;
-$blue-color: #2980b9;
+$blue-color: #3498db;
+$darkblue-color: #2980b9;
 
 .text-green {
   color: $green-color;
@@ -59,8 +60,14 @@ $blue-color: #2980b9;
   text-decoration: none;
 }
 
+body {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .user-forms {
-  box-shadow: 0 0 4px 4px rgba(128, 128, 128, 0.603);
+  box-shadow: 0 4px 2px -2px rgba(128, 128, 128, 0.603);
 
   a {
     color: $light-green-color;
@@ -93,6 +100,7 @@ $blue-color: #2980b9;
 }
 
 .footer {
+  max-width: 1300px;
   min-height: 60px;
   position: absolute;
   bottom: 0;
@@ -130,31 +138,37 @@ $blue-color: #2980b9;
 }
 
 .signs {
-  height: 70vh;
+  height: 60vh;
 }
 
-.wrapper {
-  height: 100%;
+.categories {
+  margin-left: auto;
+  margin-right: auto;
 
-  .category-name {
-    border-bottom: 3px solid $blue-color;
-    width: max-content;
-    position: absolute;
-    top: 5%;
-    left: 8%;
-  }
-  .article-title {
-    position: absolute;
-    bottom: 5%;
-    left: 8%;
-  }
-  img {
-    width: 100%;
-    height: 25vh;
-    object-fit: cover;
+  .wrapper {
+    height: 100%;
+
+    .category-name {
+      border-bottom: 3px solid $blue-color;
+      width: max-content;
+      position: absolute;
+      top: 5%;
+      left: 8%;
+    }
+
+    .article-title {
+      position: absolute;
+      bottom: 10%;
+      left: 8%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
-
 .gradient {
   position: absolute;
   object-fit: fill;
@@ -163,6 +177,47 @@ $blue-color: #2980b9;
   background: linear-gradient(rgba(0, 0, 0, 0.596), rgba(255, 255, 255, 0));
 }
 
-.cate {
-  min-height: 25vh;
+.most-pop {
+  height: 57vh;
+
+  img {
+    width: 100%;
+    height: 57vh;
+    object-fit: cover;
+  }
+
+  .article-title {
+    font-size: 2rem;
+    position: absolute;
+    bottom: 10%;
+    left: 8%;
+  }
+}
+
+.art-x-cat {
+  height: 87vh;
+
+  .article-img {
+    background-color: lightcoral;
+    width: 25%;
+    height: 43.5vh;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .article-text {
+    width: 25%;
+    height: 43.5vh;
+
+    .category {
+      font-weight: bold;
+      color: $darkblue-color;
+      border-bottom: 2px solid $darkblue-color;
+      width: max-content;
+    }
+  }
 }
