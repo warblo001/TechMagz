@@ -10,10 +10,12 @@
     </span>
     <span class="category">
       Categories: 
-      <%= @article.categories.first.name %>
+      <span class='text-primary'>
+        <%= @categories %>
+      </span> 
     </span>
     <br>
-    <span><%= vote_or_unvote(@article) %> | <%= @article.votes.count %> Votes</span>
+    <span><%= vote_or_unvote(@article) %> <%= @article.votes.count %> Votes</span>
   </div>
   <p class='content p-3'><%= @article.content %></p>
 </div> 
