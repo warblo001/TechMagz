@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :require_login, only: [:show]
+
   def new
     @user = User.new
   end
@@ -10,7 +12,8 @@ class UsersController < ApplicationController
       session[:current_user_id] = @user.id
       redirect_to @user, notice: 'Sucessful Sign Up'
     else
-      redirect_to @user, notice: 'User does not exist'
+      flash[:alert] = 'User does not exist'
+      render :sign_in
     end
   end
 

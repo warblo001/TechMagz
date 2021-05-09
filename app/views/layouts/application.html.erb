@@ -11,11 +11,14 @@
   </head>
 
   <body>
-    <header>
+    <header  class='border border-top-0'>
       <%= render 'shared/navbar' %>
     </header>
+    <%= notice_or_alert %>
 
-    <%= yield %>
+    <main  class='w-100'>
+      <%= yield %>
+    </main>
 
     <footer>
       <%= render 'shared/footer' %>
