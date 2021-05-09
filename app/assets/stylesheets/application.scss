@@ -74,16 +74,45 @@ body {
   margin-right: auto;
 }
 
+.most-pop a {
+  color: $light-green-color;
+  text-decoration: none;
+}
+
+.categories a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.art-x-cat a {
+  color: $light-green-color;
+  text-decoration: none;
+}
+
+.user-forms a {
+  color: $light-green-color;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.most-pop a:hover {
+  color: #ff741e;
+  text-decoration: underline;
+}
+
+.categories a:hover {
+  text-decoration: underline;
+}
+
+.art-x-cat a:hover {
+  color: #ff741e;
+  text-decoration: underline;
+}
+
 .user-forms {
   width: 30%;
   min-width: 400px;
-  box-shadow: 0 0px 4px 3px rgba(128, 128, 128, 0.603);
-
-  a {
-    color: $light-green-color;
-    transition: 0.3s;
-    text-decoration: none;
-  }
+  box-shadow: 4px 3px rgba(128, 128, 128, 0.603);
 
   a:hover {
     color: #f1c40f;
@@ -165,16 +194,6 @@ body {
     bottom: 10%;
     left: 8%;
   }
-
-  a {
-    color: $light-green-color;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #ff741e;
-    text-decoration: underline;
-  }
 }
 
 .categories {
@@ -183,15 +202,6 @@ body {
 
   .cate {
     height: 21vh;
-  }
-
-  a {
-    color: whitesmoke;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
   }
 
   .wrapper {
@@ -253,16 +263,6 @@ body {
       width: max-content;
     }
   }
-
-  a {
-    color: $light-green-color;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #ff741e;
-    text-decoration: underline;
-  }
 }
 
 .alert {
@@ -273,9 +273,11 @@ body {
 
 .create-article {
   height: 86vh;
+
   textarea {
     height: 30vh;
   }
+
   select {
     width: 50%;
   }
