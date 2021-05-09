@@ -1,47 +1,14 @@
 <section class='most-pop'>
   <div class='wrapper w-100 d-flex flex-column position-relative justify-content-between'>
-        <div class='gradient'></div>
-        <span class='category-name text-white'>Video Games</span>
-        <span class='article-title text-white'>The Burning Crusade is coming back in June 1!</span>
-        <%=image_tag("TBC.jpg")%>
+        <%= link_to article_path(@most_pop) do %>
+          <div class='gradient'></div>
+        <% end %>
+          <span class='article-title text-white'><%= link_to @most_pop.title, article_path(@most_pop) %></span>
+        <%= image_tag @most_pop.image %>
       </div>
 </section>
 <section class='categories'>
   <div class="row m-0">
-    <article class='cate games col p-0'>
-      <div class='wrapper w-100 d-flex flex-column position-relative justify-content-between'>
-        <div class='gradient'></div>
-        <span class='category-name text-white'>Video Games</span>
-        <span class='article-title text-white'>The Burning Crusade is coming back in June 1!</span>
-        <%=image_tag("TBC.jpg")%>
-      </div>
-    </article>
-
-    <article class='cate computers col p-0'>
-      <div class='wrapper w-100 d-flex flex-column position-relative justify-content-between'>
-        <div class='gradient'></div>
-        <span class='category-name text-white'>Video Games</span>
-        <span class='article-title text-white'>The Burning Crusade is coming back in June 1!</span>
-        <%=image_tag("TBC.jpg")%>
-      </div>
-    </article>
-
-    <article class='cate phones col p-0'>
-      <div class='wrapper w-100 d-flex flex-column position-relative justify-content-between'>
-        <div class='gradient'></div>
-        <span class='category-name text-white'>Video Games</span>
-        <span class='article-title text-white'>The Burning Crusade is coming back in June 1!</span>
-        <%=image_tag("TBC.jpg")%>
-      </div>
-    </article>
-
-    <article class='cate robotics col p-0'>
-      <div class='wrapper w-100 d-flex flex-column position-relative justify-content-between'>
-        <div class='gradient'></div>
-        <span class='category-name text-white'>Video Games</span>
-        <span class='article-title text-white'>The Burning Crusade is coming back in June 1!</span>
-        <%=image_tag("TBC.jpg")%>
-      </div>
-    </article>
+    <%= render partial: 'category', collection: @categories %>
   </div>
 </section> 
