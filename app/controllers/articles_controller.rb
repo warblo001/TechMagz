@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
-   include ArticlesHelper
+  include ArticlesHelper
 
-  before_action :require_login, only: [:create, :new]
+  before_action :require_login, only: %i[create new]
 
   def new
     @article = Article.new
@@ -20,7 +20,6 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
   end
-
 
   private
 
