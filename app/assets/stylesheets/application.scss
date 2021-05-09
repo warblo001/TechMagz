@@ -42,6 +42,10 @@ $darkblue-color: #2980b9;
   color: $light-green-color;
 }
 
+.text-darkblue {
+  color: $darkblue-color;
+}
+
 .bg-light-green {
   background-color: $light-green-color;
 }
@@ -60,20 +64,55 @@ $darkblue-color: #2980b9;
   text-decoration: none;
 }
 
+.max-w {
+  max-width: 1300px;
+}
+
 body {
   max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.user-forms {
-  box-shadow: 0 4px 2px -2px rgba(128, 128, 128, 0.603);
+.most-pop a {
+  color: $light-green-color;
+  text-decoration: none;
+}
 
-  a {
-    color: $light-green-color;
-    transition: 0.3s;
-    text-decoration: none;
-  }
+.categories a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.art-x-cat a {
+  color: $light-green-color;
+  text-decoration: none;
+}
+
+.user-forms a {
+  color: $light-green-color;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.most-pop a:hover {
+  color: #ff741e;
+  text-decoration: underline;
+}
+
+.categories a:hover {
+  text-decoration: underline;
+}
+
+.art-x-cat a:hover {
+  color: #ff741e;
+  text-decoration: underline;
+}
+
+.user-forms {
+  width: 30%;
+  min-width: 400px;
+  box-shadow: 4px 3px rgba(128, 128, 128, 0.603);
 
   a:hover {
     color: #f1c40f;
@@ -100,8 +139,7 @@ body {
 }
 
 .footer {
-  max-width: 1300px;
-  min-height: 60px;
+  min-height: 61px;
   position: absolute;
   bottom: 0;
   font-size: 0.9rem;
@@ -138,7 +176,7 @@ body {
 }
 
 .signs {
-  height: 60vh;
+  height: 86vh;
 }
 
 .most-pop {
@@ -161,6 +199,10 @@ body {
 .categories {
   margin-left: auto;
   margin-right: auto;
+
+  .cate {
+    height: 21vh;
+  }
 
   .wrapper {
     height: 100%;
@@ -192,7 +234,7 @@ body {
   object-fit: fill;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.726), rgba(255, 255, 255, 0));
+  background: rgba(0, 0, 0, 0.562);
 }
 
 .art-x-cat {
@@ -220,5 +262,65 @@ body {
       border-bottom: 2px solid $darkblue-color;
       width: max-content;
     }
+  }
+}
+
+.alert {
+  max-height: 30px;
+  padding: 0;
+  z-index: 1000;
+}
+
+.create-article {
+  height: 86vh;
+
+  textarea {
+    height: 30vh;
+  }
+
+  select {
+    width: 50%;
+  }
+}
+
+.articles {
+  max-width: 60%;
+
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .article-image {
+    height: 30vh;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .info-group {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+}
+
+main {
+  min-height: 86vh;
+}
+
+.no-articles {
+  height: 80vh;
+}
+
+.vote {
+  color: $darkblue-color;
+  text-decoration: none;
+
+  &:hover {
+    color: #c4873c;
+    text-decoration: underline;
   }
 }
