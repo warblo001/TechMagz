@@ -18,6 +18,12 @@
   text-decoration: none;
 }
 
+.most-pop img {
+  width: 100%;
+  height: 65vh;
+  object-fit: cover;
+}
+
 .art-x-cat {
   height: 86vh;
 
@@ -58,12 +64,6 @@
     color: #ff741e;
     text-decoration: underline;
   }
-}
-
-.most-pop img {
-  width: 100%;
-  height: 65vh;
-  object-fit: cover;
 }
 
 .most-pop .article-title {
@@ -120,4 +120,4 @@
 
 .no-articles {
   height: 80vh;
-} 
+}
