@@ -13,7 +13,7 @@ RSpec.describe 'Session and registration', type: :system do
       visit new_user_path
       fill_in 'Name', with: 'Andrik'
       click_on 'Sign up'
-      click_on 'Write an article'
+      click_on 'New Article'
       expect(page).to have_content('Create An Article!')
     end 
 
@@ -46,7 +46,7 @@ RSpec.describe 'Session and registration', type: :system do
       visit user_sign_in_path
       fill_in 'Name', with: 'Italivi'
       click_on 'Sign in'
-      click_on 'Write an article'
+      click_on 'New Article'
       expect(page).to have_content('Create An Article!')
     end 
   end

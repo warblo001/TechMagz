@@ -1,6 +1,6 @@
 module ApplicationHelper
   def show_or_not
-    if Article.any?
+    if !Article.blank?
       render partial: 'have_articles'
     else
       render partial: 'no_articles'
@@ -40,5 +40,11 @@ module ApplicationHelper
 
   def user_sign_in?
     session[:current_user_id]
+  end
+
+  def user_link
+    return unless user_sign_in?
+
+    render partial: 'shared/user'
   end
 end
