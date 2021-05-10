@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
-  before_action :require_login, only: [:show]
+  include UsersHelper
+
+  before_action :same_user?, only: [:show]
 
   def new
     @user = User.new
@@ -12,13 +14,14 @@ class UsersController < ApplicationController
       session[:current_user_id] = @user.id
       redirect_to @user, notice: 'Sucessful Sign Up'
     else
-      flash[:alert] = 'User does not exist'
-      render :sign_in
+      redirect_to new_user_path, alert: 'User already exist'
     end
   end
 
   def show
     @user = User.find(params[:id])
+    @my_articles = @user.authored_articles
+    @voted_articles = @user.voted_articles
   end
 
   private

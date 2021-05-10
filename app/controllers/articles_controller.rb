@@ -13,17 +13,14 @@ class ArticlesController < ApplicationController
       create_categories(params[:article][:categories], @article)
       redirect_to article_path(@article), notice: 'Article created succesfully'
     else
+      flash[:form_errors] = @article.errors
       redirect_to new_article_path, alert: 'This article can\'t be created'
     end
   end
 
   def show
     @article = Article.find(params[:id])
-    @categories = []
-    @article.categories.each do |category|
-      @categories << category.name
-    end
-    @categories = @categories.join(', ')
+    @categories = @article.categories.map(&:name).join(', ')
   end
 
   private

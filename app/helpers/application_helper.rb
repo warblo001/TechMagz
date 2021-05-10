@@ -1,9 +1,9 @@
 module ApplicationHelper
   def show_or_not
-    if Article.any?
-      render partial: 'have_articles'
-    else
+    if Article.blank?
       render partial: 'no_articles'
+    else
+      render partial: 'have_articles'
     end
   end
 
@@ -32,13 +32,19 @@ module ApplicationHelper
 
     vote = Vote.find_by(article: article, user: current_user)
     if vote
-      render partial: 'shared/unvote', object: vote
+      render partial: 'shared/unvote', locals: { unvote: vote, article: article }
     else
-      render partial: 'shared/vote'
+      render partial: 'shared/vote', locals: { vote: vote, article: article }
     end
   end
 
   def user_sign_in?
     session[:current_user_id]
+  end
+
+  def user_link
+    return unless user_sign_in?
+
+    render partial: 'shared/user'
   end
 end
