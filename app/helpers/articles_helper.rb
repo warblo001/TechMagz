@@ -13,7 +13,6 @@ module ArticlesHelper
     end
   end
 
-  
   def title_error
     return unless flash[:form_errors]
 
@@ -31,5 +30,4 @@ module ArticlesHelper
 
     flash[:form_errors]['image'].first if flash[:form_errors].include?('image')
   end
-
 end
