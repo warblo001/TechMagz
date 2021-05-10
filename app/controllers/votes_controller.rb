@@ -3,9 +3,9 @@ class VotesController < ApplicationController
     @vote = current_user.votes.new(article_id: params[:article_id])
 
     if @vote.save
-      redirect_to article_path(params[:article_id]), notice: 'You voted this post.'
+      redirect_to request.referrer, notice: 'You voted this post.'
     else
-      redirect_to article_path(params[:article_id]), alert: 'You cant vote this post.'
+      redirect_to request.referrer, alert: 'You cant vote this post.'
     end
   end
 
@@ -13,9 +13,9 @@ class VotesController < ApplicationController
     vote = Vote.find_by(id: params[:id], user: current_user, article_id: params[:article_id])
     if vote
       vote.destroy
-      redirect_to article_path(params[:article_id]), notice: 'You disliked a post.'
+      redirect_to request.referrer, alert: 'You unvoted this post.'
     else
-      redirect_to article_path(params[:article_id]), alert: 'You cant dislike a post without like.'
+      redirect_to request.referrer, alert: 'You cant unvote a post without a vote.'
     end
   end
 end

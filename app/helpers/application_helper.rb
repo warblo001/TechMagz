@@ -32,9 +32,9 @@ module ApplicationHelper
 
     vote = Vote.find_by(article: article, user: current_user)
     if vote
-      render partial: 'shared/unvote', object: vote
+      render partial: 'shared/unvote', locals: { unvote: vote, article: article }
     else
-      render partial: 'shared/vote'
+      render partial: 'shared/vote', locals: { vote: vote, article: article }
     end
   end
 
