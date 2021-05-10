@@ -219,6 +219,10 @@ body {
       position: absolute;
       bottom: 10%;
       left: 8%;
+
+      a:hover {
+        color: $light-green-color;
+      }
     }
 
     img {
