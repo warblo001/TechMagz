@@ -1,4 +1,5 @@
 AllCops:
+  NewCops: enable
   Exclude:
     - "db/**/*"
     - "bin/*" 
@@ -10,7 +11,7 @@ AllCops:
   DisplayCopNames: true
 
 Layout/LineLength:
-  Max: 150
+  Max: 120
 Metrics/MethodLength:
   Include:
     - "app/controllers/*"
@@ -24,8 +25,8 @@ Metrics/AbcSize:
 Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
-  ExcludedMethods: ['describe']
-  Max: 50
+  IgnoredMethods: ['describe']
+  Max: 30
 
 Style/Documentation:
   Enabled: false
@@ -40,8 +41,6 @@ Style/DefWithParentheses:
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
 
-Layout/EndOfLine:
-  Enabled: false
 Layout/HashAlignment:
   EnforcedColonStyle: key
 Layout/ExtraSpacing:

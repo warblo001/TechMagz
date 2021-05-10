@@ -1,0 +1,20 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import 'application.scss';
+@import 'bootstrap';
+
+.user {
+  a {
+    margin-right: 0.5rem;
+    color: $light-green-color;
+    height: 30px;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #ff741e;
+    text-decoration: underline;
+  }
+}

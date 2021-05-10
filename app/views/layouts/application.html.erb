@@ -10,7 +10,19 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class='max-w'>
+    <header  class='border border-top-0'>
+      <%= render 'shared/navbar' %>
+    </header>
+    <%= notice_or_alert %>
+
+    <main  class='w-100'>
+      <%= yield %>
+    </main>
+
+    <footer class='max-w'>
+      <%= render 'shared/footer' %>
+    </footer>
   </body>
+
 </html>
