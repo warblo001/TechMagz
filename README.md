@@ -8,6 +8,11 @@ TechMagz is a capstone project for the Microverse. In this project I used the MV
 
 ## Live Link
 
+https://young-castle-21039.herokuapp.com/
+
+## Live Video
+
+https://www.loom.com/share/d6f6ef5988e1422a9c540b9aeea9cb97
 
 ## Built With
 
