@@ -4,7 +4,7 @@
 
 ## About
 
-TechMagz is a capstone project for the Microverse. In this project I used the MVC to create a magazine page where people can create articles, upvote them, sign up, sign in, and log out. I use active storage for images to be saved with the articles.
+TechMagz is a capstone project for the Microverse program. In this project I used the MVC to create a magazine page where people can create articles, upvote them, sign up, sign in, and log out. I use active storage for images to be saved with the articles.
 
 ## Live Link
 
