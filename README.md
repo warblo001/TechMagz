@@ -8,7 +8,7 @@ TechMagz is a capstone project for the Microverse program. In this project I use
 
 ## Live Link
 
-https://young-castle-21039.herokuapp.com/
+https://safe-journey-91959.herokuapp.com/
 
 ## Live Video
 
