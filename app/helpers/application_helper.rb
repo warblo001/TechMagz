@@ -1,6 +1,6 @@
 module ApplicationHelper
   def show_or_not
-    if Article.blank?
+    if !Article.blank?
       render partial: 'no_articles'
     else
       render partial: 'have_articles'
@@ -8,7 +8,7 @@ module ApplicationHelper
   end
 
   def login_or_logout
-    if session[:current_user_id].nil?
+    if session[:current_user].nil?
       render partial: 'shared/log_in'
     else
       render partial: 'shared/log_out'
@@ -16,7 +16,7 @@ module ApplicationHelper
   end
 
   def user_signed_in?
-    !session[:current_user_id].nil?
+    !session[:current_user].nil?
   end
 
   def notice_or_alert
@@ -39,7 +39,7 @@ module ApplicationHelper
   end
 
   def user_sign_in?
-    session[:current_user_id]
+    session[:current_user]
   end
 
   def user_link

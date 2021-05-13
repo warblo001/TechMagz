@@ -1,1 +1,5 @@
-<%= link_to current_user.name.upcase, user_path(session[:current_user_id]) %>
+<% if current_user %>
+<%= link_to current_user.name.upcase, user_path(session[:current_user]) %>
+<%else%>
+<%= render 'log_in' %>
+<% end %>
