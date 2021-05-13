@@ -1,9 +1,9 @@
 module ApplicationHelper
   def show_or_not
-    if !Article.blank?
-      render partial: 'no_articles'
-    else
+    if Article.exists?
       render partial: 'have_articles'
+    else
+      render partial: 'no_articles'
     end
   end
 

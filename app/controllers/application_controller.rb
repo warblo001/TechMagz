@@ -4,7 +4,8 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :require_login
 
   def current_user
-   User.find(session[:current_user])
+    User.find(session[:current_user]) if session[:user_id]
+    User.find(session[:current_user])
   end
 
   def require_login

@@ -122,10 +122,11 @@ body {
 
 .footer {
   max-width: 1300px;
-  min-height: 61px;
+  min-height: 68px;
   position: absolute;
   bottom: 0;
   font-size: 0.9rem;
+  background-color: #e74c3c;
 
   .logo {
     font-size: 1.3rem;
@@ -163,7 +164,7 @@ body {
 }
 
 .alert {
-  max-height: 30px;
+  max-height: 50px;
   padding: 0;
   z-index: 1000;
 }
