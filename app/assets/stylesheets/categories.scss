@@ -55,6 +55,10 @@
     color: #ff741e;
     text-decoration: underline;
   }
+
+  :hover {
+    background: rgba(0, 0, 0, 0);
+  }
 }
 
 .most-pop {
@@ -63,6 +67,10 @@
   a:hover {
     color: #ff741e;
     text-decoration: underline;
+  }
+
+  :hover {
+    background: rgba(0, 0, 0, 0);
   }
 }
 
@@ -75,6 +83,10 @@
 
 .categories a:hover {
   text-decoration: underline;
+}
+
+.categories :hover {
+  background: rgba(0, 0, 0, 0);
 }
 
 .categories {

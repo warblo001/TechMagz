@@ -21,7 +21,7 @@ $red-color: #c0392b;
 $light-green-color: #1abc9c;
 $blue-color: #3498db;
 $darkblue-color: #2980b9;
-$yellow-color: #f2e30c;
+$yellow-color: #e74c3c;
 
 .text-green {
   color: $green-color;
@@ -67,12 +67,12 @@ $yellow-color: #f2e30c;
 
 .max-w {
   max-width: 1300px;
+  margin: auto;
 }
 
 body {
   max-width: 1300px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 
 .art-x-cat a {
@@ -122,13 +122,15 @@ body {
 
 .footer {
   max-width: 1300px;
-  min-height: 61px;
+  min-height: 75px;
   position: absolute;
   bottom: 0;
   font-size: 0.9rem;
+  background-color: #e74c3c;
 
   .logo {
     font-size: 1.3rem;
+    color: $light-green-color;
   }
 
   .info {
@@ -163,7 +165,7 @@ body {
 }
 
 .alert {
-  max-height: 30px;
+  max-height: 50px;
   padding: 0;
   z-index: 1000;
 }

@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      session[:current_user_id] = @user.id
+      session[:current_user] = @user.id
       redirect_to @user, notice: 'Sucessful Sign Up'
     else
       redirect_to new_user_path, alert: 'User already exist'

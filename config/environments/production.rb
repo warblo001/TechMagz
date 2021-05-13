@@ -11,6 +11,8 @@ Rails.application.configure do
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
+  # Store uploaded files on the local file system (see config/storage.yml for options).
+  config.active_storage.service = :cloudinary
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
