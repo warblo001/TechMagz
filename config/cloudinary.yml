@@ -1,0 +1,22 @@
+---
+development:
+  cloud_name: warblo001
+  api_key: '445687244457864'
+  api_secret: c6CxU90wYpd5oJQdXP94dCalzuc
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: warblo001
+  api_key: '445687244457864'
+  api_secret: c6CxU90wYpd5oJQdXP94dCalzuc
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: warblo001
+  api_key: '445687244457864'
+  api_secret: c6CxU90wYpd5oJQdXP94dCalzuc
+  enhance_image_tag: true
+  static_file_support: false
+
+cloudinary:      
+  service: Cloudinary

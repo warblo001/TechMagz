@@ -67,12 +67,12 @@ $yellow-color: #e74c3c;
 
 .max-w {
   max-width: 1300px;
+  margin: auto;
 }
 
 body {
   max-width: 1300px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 
 .art-x-cat a {
@@ -122,7 +122,7 @@ body {
 
 .footer {
   max-width: 1300px;
-  min-height: 68px;
+  min-height: 75px;
   position: absolute;
   bottom: 0;
   font-size: 0.9rem;
@@ -130,6 +130,7 @@ body {
 
   .logo {
     font-size: 1.3rem;
+    color: $light-green-color;
   }
 
   .info {

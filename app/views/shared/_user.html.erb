@@ -1,5 +1,5 @@
 <% if current_user != nil %>
-  <%= link_to current_user.name.upcase, user_path(session[:current_user]) %>
+  <%= link_to current_user.name.capitalize, user_path(session[:current_user]) %>
 <% else %>
   <%= link_to " ", user_sign_in_path, class: 'form-link' %>
 <% end %>
